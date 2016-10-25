@@ -16,6 +16,9 @@
  *******************************************************************************/
 package org.mitre.openid.connect.service;
 
+import java.util.List;
+
+import org.mitre.openid.connect.model.DefaultUserInfo;
 import org.mitre.openid.connect.model.UserInfo;
 
 /**
@@ -51,5 +54,12 @@ public interface UserInfoService {
 	 * @return
 	 */
 	public UserInfo getByEmailAddress(String email);
-
+	
+	/**
+	 * Get the all users
+	 * 
+	 * @param email
+	 * @return list of <code>DefaultUserInfo</code>
+	 */
+	public List<DefaultUserInfo> getAllUsersInfo();
 }
